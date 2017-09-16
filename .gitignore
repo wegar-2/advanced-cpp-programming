@@ -2,9 +2,9 @@
 # 	1) object files created from the C++ source code 
 #	2) Code::Blocks project files: .cbp, .depend, .layout
 #	3) folders created by Code::Blocks project: obj, bin
-/*/Debug # ignoring Code::Blocks Debug folders in repo's subdirectories 
-/*/obj # ignoring Code::Blocks obj folders in repo's subdirectories
-/*/bin # ignoring Code::Blocks bin folders in repo's subdirectories
-/*/*.layout # ignoring C-B's .layout files
-/*/*.depend
-/*/*.cbp
+*/bin
+*/obj
+
+*/*.layout
+*/*.cbp
+*/*.depend

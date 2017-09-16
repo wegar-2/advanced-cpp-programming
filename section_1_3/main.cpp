@@ -15,7 +15,7 @@ int main()
 
     cout << "\n\n\nEmployee: " << endl;
     cout << mgr1.toString() << endl;
-    cout << "Gross pay - 40h: " << mgr1.getGrossPay(40) << endl;
+    // cout << "Gross pay - 40h: " << mgr1.getGrossPay(40) << endl;
 
     return 0;
 }

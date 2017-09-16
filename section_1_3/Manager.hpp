@@ -30,10 +30,11 @@ public:
         return (this->getPay())*hours;
     }
     */
+    /*
     int getGrossPay(int hours) {
         return hours*pay;
     }
-
+*/
 };
 
 #endif // MANAGER_HPP
