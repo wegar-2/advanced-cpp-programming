@@ -15,7 +15,7 @@ FinInst::FinInst():
 FinInst::FinInst(string itsCurrency,
                  string itsIssuer,
                  AssetClass itsAssetClass,
-                 InstrumentType itsType):
+                 InstrumentType itsInstrumentType):
                      itsAssetClass(itsAssetClass),
                      itsInstrumentType(itsInstrumentType)
 {

@@ -23,7 +23,6 @@ public:
             string itsIssuer,
             AssetClass itsAssetClass,
             InstrumentType itsType);
-
     ~FinInst();
     FinInst(const FinInst& rhs);
 
