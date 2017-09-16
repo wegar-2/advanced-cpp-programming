@@ -1,0 +1,18 @@
+# depslib dependency file v1.0
+1505565203 source:/home/herhor/github_repos/advanced-cpp-programming/section_1_2/Employee.cpp
+	<iostream>
+	<sstream>
+	<string>
+	"Employee.hpp"
+
+1505565021 /home/herhor/github_repos/advanced-cpp-programming/section_1_2/Employee.hpp
+	<string>
+
+1505564933 source:/home/herhor/github_repos/advanced-cpp-programming/section_1_2/main.cpp
+	<iostream>
+	"Employee.hpp"
+	"Manager.hpp"
+
+1505564524 /home/herhor/github_repos/advanced-cpp-programming/section_1_2/Manager.hpp
+	"Employee.hpp"
+
