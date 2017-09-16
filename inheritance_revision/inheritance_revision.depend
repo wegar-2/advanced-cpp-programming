@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1505577442 source:/home/herhor/github_repos/cpp-notes/cpp_tricky_questions/inheritance_revision/FinancialInstrument.cpp
+	"FinancialInstrument.hpp"
+	<iostream>
+	<string>
+
+1505577352 /home/herhor/github_repos/cpp-notes/cpp_tricky_questions/inheritance_revision/FinancialInstrument.hpp
+	<string>
+	"AssetClass.hpp"
+	"InstrumentType.hpp"
+
+1505576570 /home/herhor/github_repos/cpp-notes/cpp_tricky_questions/inheritance_revision/AssetClass.hpp
+
+1505576581 /home/herhor/github_repos/cpp-notes/cpp_tricky_questions/inheritance_revision/InstrumentType.hpp
+
