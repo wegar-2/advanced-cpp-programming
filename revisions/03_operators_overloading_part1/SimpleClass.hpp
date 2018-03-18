@@ -10,6 +10,8 @@ public:
     // other methods
     void IncrementCounter();
     int GetCounterValue() const;
+    // operators
+    void operator++();
 private:
     int* pCounter;
     T1* px;

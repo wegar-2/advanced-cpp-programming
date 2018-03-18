@@ -29,4 +29,10 @@ int SimpleClass<T1, T2>::GetCounterValue() const {
     return *pCounter;
 }
 
+template <typename T1, typename T2>
+void SimpleClass<T1, T2>::operator++ () {
+    *pCounter = *pCounter + 1;
+    cout << "Inside incrementation operator function..." << endl;
+}
+
 template class SimpleClass<int, int> ;

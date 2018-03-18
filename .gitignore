@@ -5,6 +5,9 @@
 */bin
 */obj
 
+./**/*.layout
+
+
 */*.layout
 */*.cbp
 */*.depend
@@ -14,3 +17,4 @@
 
 */*/*.cbp
 */*/*.layout
+*/*/*.depend

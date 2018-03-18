@@ -9,5 +9,7 @@ int main()
     cout << sc1.GetCounterValue() << endl;
     sc1.IncrementCounter();
     cout << sc1.GetCounterValue() << endl;
+    ++sc1;
+    cout << sc1.GetCounterValue() << endl;
     return 0;
 }
