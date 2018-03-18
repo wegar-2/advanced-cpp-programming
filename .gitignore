@@ -8,3 +8,9 @@
 */*.layout
 */*.cbp
 */*.depend
+
+*/*/bin
+*/*/obj
+
+*/*/*.cbp
+*/*/*.layout
