@@ -1,4 +1,10 @@
 */obj
+*/bin
+
 */*.cbp
 */*.depend
 */*.layout
+
+*/*/bin
+*/*/obj
+
