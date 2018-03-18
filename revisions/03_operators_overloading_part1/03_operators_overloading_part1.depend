@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1521376285 source:/home/herhor/github_repos/advanced-cpp-programming/revisions/03_operators_overloading_part1/main.cpp
+	<iostream>
+	"SimpleClass.hpp"
+
+1521375984 /home/herhor/github_repos/advanced-cpp-programming/revisions/03_operators_overloading_part1/SimpleClass.hpp
+
+1521376334 source:/home/herhor/github_repos/advanced-cpp-programming/revisions/03_operators_overloading_part1/SimpleClass.cpp
+	<iostream>
+	"SimpleClass.hpp"
+	<cstdlib>
+
