@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1521378924 source:/home/herhor/github_repos/advanced-cpp-programming/03_generic_programming/02_template_class/main.cpp
+	<iostream>
+	"OrderedPair.hpp"
+
+1521378455 /home/herhor/github_repos/advanced-cpp-programming/03_generic_programming/02_template_class/OrderedPair.hpp
+
+1521379129 source:/home/herhor/github_repos/advanced-cpp-programming/03_generic_programming/02_template_class/OrderedPair.cpp
+	<iostream>
+	"OrderedPair.hpp"
+
