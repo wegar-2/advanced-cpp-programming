@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1521361790 source:/home/herhor/github_repos/advanced-cpp-programming/03_generic_programming/01_introductory_example/MyFunctions.cpp
+	<iostream>
+	"MyFunctions.hpp"
+
+1521361959 /home/herhor/github_repos/advanced-cpp-programming/03_generic_programming/01_introductory_example/MyFunctions.hpp
+
+1521362323 source:/home/herhor/github_repos/advanced-cpp-programming/03_generic_programming/01_introductory_example/main.cpp
+	<iostream>
+	"MyFunctions.hpp"
+
