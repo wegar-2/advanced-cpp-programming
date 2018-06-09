@@ -70,6 +70,21 @@ void MyStack<T, max_elem_num>::print_stack() {
     }
 }
 
+template<typename T, int max_elem_num>
+int MyStack<T, max_elem_num>::count_elements() {
+    return top_pointer + 1;
+}
+
+template <typename T, int max_elem_num>
+bool MyStack<T, max_elem_num>::isEmpty() {
+    if (top_pointer == -1) {
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+
 
 template class MyStack<int, 3>;
 template class MyStack<string, 3>;

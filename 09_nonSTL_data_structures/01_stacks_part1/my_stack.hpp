@@ -14,6 +14,8 @@ class MyStack {
         T peek();
         void clear_stack();
         void print_stack();
+        int count_elements();
+        bool isEmpty();
     private:
         int top_pointer;
         T elements_array[max_elem_num];
