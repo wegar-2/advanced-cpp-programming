@@ -12,11 +12,16 @@ class MyQueue {
         T outQueue();
         void showQueue();
         T getQueueMember();
+        unsigned int displayCount();
+        T getFront();
+        T getBack();
+        void clearQueue();
 
     private:
         int queueEnd;
         T queueMembers[maxQueueLen];
         void adjustQueue();
+        bool isEmpty();
 };
 
 #endif // MYQUEUE_HPP

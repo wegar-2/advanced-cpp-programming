@@ -59,7 +59,6 @@ void MyQueue<T, maxQueueLen>::adjustQueue() {
 
 
 
-
 // print queue contents
 template <typename T, unsigned int maxQueueLen>
 void MyQueue<T, maxQueueLen>::showQueue() {
@@ -70,6 +69,61 @@ void MyQueue<T, maxQueueLen>::showQueue() {
             cout << "\tqueue[" << k << "] = " << queueMembers[k] << endl;
         }
         cout << endl;
+    }
+    else {
+        throw EmptyQueueException();
+    }
+}
+
+
+
+// display count of elements
+template <typename T, unsigned int maxQueueLen>
+unsigned int MyQueue<T, maxQueueLen>::displayCount() {
+    if (queueEnd >= 0) {
+        cout << "Displaying count of elements: " << queueEnd + 1 << endl;
+        return queueEnd + 1;
+    }
+    else {
+        cout << "Queue is empty..." << endl;
+        return 0;
+    }
+}
+
+
+
+// class getters and setters
+template <typename T, unsigned int maxQueueLen>
+T MyQueue<T, maxQueueLen>::getFront() {
+    if (queueEnd != -1) {
+        return queueMembers[0];
+    }
+    else {
+        throw EmptyQueueException();
+    }
+}
+
+template <typename T, unsigned int maxQueueLen>
+T MyQueue<T, maxQueueLen>::getBack() {
+    if (queueEnd != -1) {
+        return queueMembers[queueEnd];
+    }
+    else {
+        throw EmptyQueueException();
+    }
+}
+
+
+
+// function to clear the queue
+template <typename T, unsigned int maxQueueLen>
+void MyQueue<T, maxQueueLen>::clearQueue() {
+    if (queueEnd != -1) {
+        cout << "Clearing a queue..." << endl;
+        for (int k = 0; k <= queueEnd; k++) {
+            queueMembers[k] = T();
+        }
+        queueEnd = -1;
     }
     else {
         throw EmptyQueueException();

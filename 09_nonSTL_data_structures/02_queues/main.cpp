@@ -25,6 +25,8 @@ int main()
         cout << "General exception caught..." << endl;
     }
     queue0.showQueue();
-
+    queue0.outQueue();
+    queue0.outQueue();
+    queue0.showQueue();
     return 0;
 }
