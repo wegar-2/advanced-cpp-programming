@@ -75,7 +75,19 @@ void Fraction::PrintFraction() const {
 }
 
 void Fraction::SimplifyFraction() {
-    std::cout << "" << std::endl;
+    std::cout << "Simplifying a fraction..." << std::endl;
+    unsigned int gcd = findGCD(abs(*pNumerator), std::abs(*pDenominator));
+    // division
+    if (gcd > 1) {
+        *pNumerator = *pNumerator/gcd;
+        *pDenominator = *pDenominator/gcd;
+    }
+    // simplify the signs
+    if (*pNumerator < 0 && *pDenominator < 0) {
+        *pNumerator = -*pNumerator;
+        *pDenominator = -*pDenominator;
+    }
+
 }
 
 
