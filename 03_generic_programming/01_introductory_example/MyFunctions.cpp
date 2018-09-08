@@ -12,8 +12,8 @@ T MyTemplateFunction(T arg1) {
 template <typename T1, typename T2>
 void MyAnotherTemplateFunction(T1 arg1, T2 arg2) {
     cout << "Inside MyAnotherTemplateFunction..." << endl;
-    cout << "\tFirst argument doubled: " << arg1 << endl;
-    cout << "\tSecond argument doubled: " << arg2 << endl;
+    cout << "\tFirst argument doubled: " << 2*arg1 << endl;
+    cout << "\tSecond argument doubled: " << 2*arg2 << endl;
 }
 
 
