@@ -30,3 +30,13 @@ void PrintArray(T* pArrayIn, unsigned int ArrayLen) {
 
 template void PrintArray<int>(int* pArrayIn, unsigned int ArrayLen);
 template void PrintArray<double>(double* pArrayIn, unsigned int ArrayLen);
+
+
+void PrintArrayOfIntsPointers(int** ppArray, unsigned int ArrayLen) {
+    std::cout << "Inside PrintArrayOfIntsPointers: " << std::endl;
+    for (unsigned int k = 0; k < ArrayLen; ++k) {
+            std::cout << "\t\t" << "array[" << k << "] = " << ppArray[k] << std::endl;
+        std::cout << "\t\t" << "*array[" << k << "] = " << *ppArray[k] << std::endl;
+    }
+}
+

@@ -60,7 +60,7 @@ int main()
 
 
     // -------------------------------------------------------------------------
-    // 4. passing arrays to and from functions
+    // 4. passing stack arrays to and from functions
     int MyArray[] = {1, 2, 3, 4};
     PrintIntsArray(MyArray, 4);
 
@@ -68,6 +68,15 @@ int main()
     PrintDoublesArray(MyDoubleArray, 4);
 
     PrintArray<double>(MyDoubleArray, 4);
+
+    // -------------------------------------------------------------------------
+    // passing array of pointers to a function
+    int* TestArray[4];
+    TestArray[0] = new int(-12);
+    TestArray[1] = new int(123);
+    TestArray[2] = new int(1);
+    TestArray[3] = new int(100);
+    PrintArrayOfIntsPointers(TestArray, 4);
 
     // -------------------------------------------------------------------------
     // tidy up the memory
