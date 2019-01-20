@@ -46,6 +46,35 @@ Point2D& Point2D::operator=(const Point2D& rhs) {
     *pY = rhs.GetY();
 }
 
+// other operators
+const Point2D& Point2D::operator++() {
+    ++(*pX);
+    ++(*pY);
+    return *this;
+}
+const Point2D Point2D::operator++(int) {
+    ++(*pX);
+    ++(*pY);
+    return Point2D(*pX - 1, *pY - 1);
+}
+const Point2D& Point2D::operator--() {
+    --(*pX);
+    --(*pY);
+    return *this;
+}
+const Point2D Point2D::operator--(int) {
+    --(*pX);
+    --(*pY);
+    return Point2D(*pX + 1, *pY + 1);
+}
+Point2D Point2D::operator+(const Point2D& rhs) const {
+    return Point2D(*pX + rhs.GetX(), *pY + rhs.GetY());
+}
+Point2D Point2D::operator-(const Point2D& rhs) const {
+    return Point2D(*pX - rhs.GetX(), *pY - rhs.GetY());
+}
+
+
 // getters and setters
 void Point2D::SetX(double x) { *pX = x; }
 void Point2D::SetY(double y) { *pY = y; }

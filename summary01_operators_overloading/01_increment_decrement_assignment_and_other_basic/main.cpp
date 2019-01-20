@@ -17,6 +17,23 @@ int main()
     // 4. assignment operator
     point3 = point2;
     point3.PrintPoint();
+    // 5. increment and decrement operators
+    point3++;
+    ++point3;
+    point3.PrintPoint();
+    point3--;
+    --point3;
+    point3.PrintPoint();
+    // 6. addition
+    point1.PrintPoint();
+    point2.PrintPoint();
+    Point2D point5 = point1 + point2;
+    point5.PrintPoint();
+    // 7. subtraction
+    point3.PrintPoint();
+    point4.PrintPoint();
+    Point2D point6 = point3 - point4;
+    point6.PrintPoint();
 
     return 0;
 }

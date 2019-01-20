@@ -15,6 +15,18 @@ public:
     Point2D(const Point2D& rhs);
     // assignment operator
     Point2D& operator=(const Point2D& rhs);
+    // other operators
+    const Point2D& operator++();
+    const Point2D operator++(int);
+    const Point2D& operator--();
+    const Point2D operator--(int);
+    /*
+        Note: all the operators return constant in order to avoid situation in
+        which the operator is called again on the returned object, e.g.
+        point++++ or ++++point
+    */
+    Point2D operator+(const Point2D& rhs) const;
+    Point2D operator-(const Point2D& rhs) const;
     // getters and setters
     void SetX(double x);
     void SetY(double y);
