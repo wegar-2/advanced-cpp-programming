@@ -17,14 +17,7 @@ double* RandomizeDoublesArray(double* pArrayIn, const unsigned int ArrayLen,
 /* heap arrays creators */
 double* GenerateGaussianStandardValues(const unsigned int N);
 
-
-/* ========================================================================== */
-/* creators of arrays of pointers */
-
-
-
-/* ========================================================================== */
-/* printers of arrays of pointers */
+void GenerateGaussianStandardValues(double* ArrayIn, const unsigned int N);
 
 
 /* ========================================================================== */

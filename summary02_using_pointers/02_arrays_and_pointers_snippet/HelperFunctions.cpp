@@ -3,6 +3,7 @@
 #include <boost/random/variate_generator.hpp>
 #include <boost/random/mersenne_twister.hpp>
 #include <boost/random/normal_distribution.hpp>
+#include <cstdlib>
 
 
 
@@ -105,14 +106,23 @@ double* GenerateGaussianStandardValues(const unsigned int N) {
     return pHeapArray; // returns pointer to the first element of an array
 }
 
-
-/* ========================================================================== */
-/* creators of arrays of pointers */
-
-
-
-/* ========================================================================== */
-/* printers of arrays of pointers */
+void GenerateGaussianStandardValues(double* ArrayIn, const unsigned int N) {
+    if (N == 0) {
+        std::cout << "Function has been asked to fill-in array of-length zero..." <<
+        std::endl;
+        std::cout << "Returning the obtained array unchanged..." << std::endl;
+    }
+    // prepare the random number generators
+    boost::random::mt19937 mt = boost::random::mt19937(1123);
+    boost::random::normal_distribution<> nd =
+            boost::random::normal_distribution<>(0, 1);
+    boost::random::variate_generator<boost::random::mt19937,
+                                     boost::random::normal_distribution<>> nd_rng =
+        boost::random::variate_generator<boost::random::mt19937,
+                    boost::random::normal_distribution<>>(mt, nd);
+    // fill-in the obtained heap array
+    for (unsigned int k = 0; k < N; ++k) { ArrayIn[k] = nd_rng(); }
+}
 
 
 /* ========================================================================== */

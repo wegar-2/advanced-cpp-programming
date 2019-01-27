@@ -6,6 +6,7 @@ const int GlobalModulo = 100;
 
 int main()
 {
+    /* ====================================================================== */
     // 1. working with stack arrays
     std::cout << "--------------- 1. ---------------" <<  std::endl;
     int StackArray[10];
@@ -15,6 +16,7 @@ int main()
     PrintIntArray(StackArray, 10);
 
 
+    /* ====================================================================== */
     // 2. working with stack arrays: passing to and from functions
     std::cout << "--------------- 2. ---------------" <<  std::endl;
     double DoublesArray[5] = {0, 0, 0, 0, 0};
@@ -51,20 +53,35 @@ int main()
     */
 
 
+    /* ====================================================================== */
     // 3. working with heap arrays: passing to and from functions
     std::cout << "--------------- 3. ---------------" <<  std::endl;
+    // 3.1. the wrong way to go about this... ==> DO NOT DO THIS!!!,
+    // just for purpose of investigation
+    std::cout << "----- 3.1. -----" <<  std::endl;
     double* MyHeapArray = GenerateGaussianStandardValues(10);
     PrintDoubleArray(MyHeapArray, 10);
     std::cout << "Randomizing the heap array..." << std::endl;
     RandomizeDoublesArray(MyHeapArray, 10);
     PrintDoubleArray(MyHeapArray, 10);
+    /*
+        HOW about: releasing the memory allocated to store the MyHeapArray?
+        This is the HUGE drawback of creating array inside the
+        GenerateGaussianStandardValues() function: how to return the memory
+        allocated there to stack?...
+            ====>       BOOM!!!
+    */
+    // 3.2. the right way to go about this
+    std::cout << "----- 3.2. -----" <<  std::endl;
+    double* MyEmptyHeapArray = new double[10];
+    GenerateGaussianStandardValues(MyEmptyHeapArray, 10);
+    TemplatedArrayPrinter<double>(MyEmptyHeapArray, 10);
+    // remember to release the memory!
+    delete[] MyEmptyHeapArray;
 
 
-    // 4. working with arrays of pointers: passing to and from functions
-    std::cout << "--------------- 4. ---------------" <<  std::endl;
-
-
-    // 5. testing the templated function
+    /* ====================================================================== */
+    // 4. testing the templated function
     std::cout << "--------------- 5. ---------------" <<  std::endl;
     TemplatedArrayPrinter<int>(StackArray, 10);
     TemplatedArrayPrinter<double>(AnotherDoublesArray, 6);
