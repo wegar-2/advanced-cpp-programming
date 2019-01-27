@@ -53,13 +53,21 @@ int main()
 
     // 3. working with heap arrays: passing to and from functions
     std::cout << "--------------- 3. ---------------" <<  std::endl;
-
+    double* MyHeapArray = GenerateGaussianStandardValues(10);
+    PrintDoubleArray(MyHeapArray, 10);
+    std::cout << "Randomizing the heap array..." << std::endl;
+    RandomizeDoublesArray(MyHeapArray, 10);
+    PrintDoubleArray(MyHeapArray, 10);
 
 
     // 4. working with arrays of pointers: passing to and from functions
     std::cout << "--------------- 4. ---------------" <<  std::endl;
 
 
+    // 5. testing the templated function
+    std::cout << "--------------- 5. ---------------" <<  std::endl;
+    TemplatedArrayPrinter<int>(StackArray, 10);
+    TemplatedArrayPrinter<double>(AnotherDoublesArray, 6);
 
     return 0;
 }
